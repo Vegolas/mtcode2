@@ -1,0 +1,236 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face  {
+ font-family: Marske;
+ src: url(../fonts/Marske.otf);
+}
+@font-face  {
+	font-family: Marske;
+	src: url(../fonts/Marske.ttf);
+ }
+html {
+	font-size: 10px;
+	background: repeating-linear-gradient(
+  0deg,
+  #002626 ,
+  #002626  1px,
+  #111 1x,
+  #111 3px
+);
+background: -moz-repeating-linear-gradient(
+  0deg,
+  #002626 ,
+  #002626  1px,
+  #111 1x,
+  #111 3px
+);
+}
+body {
+	font-family:  'Courier New', Courier, monospace;
+	margin: 5rem;
+	
+border: 2px solid #0ff;
+box-shadow: 0px 0px 20px #00ffffcc;
+background-color: #002626;
+animation: siteBlink infinite 5s;
+}
+
+@keyframes siteBlink{
+	0%{
+		box-shadow: 0px 0px 20px #00ffffcc;
+	}
+	50%
+	{
+box-shadow: 0px 0px 5px #00ffffcc;
+	}
+	100%{
+		box-shadow: 0px 0px 20px #00ffffcc;
+
+	}
+}
+
+.header {
+	position: relative;
+	height: 70vh;	
+	background-image: url('../bg1.jpg');
+	background-position: center;
+	background-size: cover;
+	background-color: #0ff;
+	background-blend-mode: darken;
+}
+
+.header__graphic-box {
+	position: absolute;
+	
+  }
+.header__graphic-box--first {
+	top: 8rem;
+	left: 8rem;
+}
+.header__graphic-box--sec {
+	bottom: 8rem;
+	right: 8rem;
+}
+ 
+  .header__img{
+	height: 10rem;
+  }
+  .header__text-box {
+	  position: absolute;
+
+	  font-size: 6rem;
+	  color: #fff;
+  }
+  .header__list {
+	  list-style: none;
+	  display: inline-block;
+  }
+  .header__list li{
+	  display: none;
+  }
+  .header__list li.active {
+	  display: block;
+  }
+  .header__text-box--first {
+	top: 8rem;
+	right: 8rem;
+  }
+  .header__text-box--sec{
+	bottom: 8rem;
+	left: 8rem;
+	}
+	.offer {
+		display: flex;
+		border-top: 2px solid #0ff;
+		text-shadow: 0px 0px 8px #0ff;
+		padding: 10px;
+	}
+	.offer__column {
+		flex: 1 33%;
+		border: 2px solid #0ff;
+		color: #0ff;
+		margin: 10px;
+    position: relative;
+
+    margin: 20px;
+    border: none;
+    box-sizing: content-box;
+		border: 2px solid transparent;
+
+}
+.offer__column span{
+	display: flex;
+	flex-direction: row; 
+
+}
+.offer__column::before, .offer__column::after, .offer__column span::before, .offer__column span::after {
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.offer__column::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition: 0.5s all;
+}
+.offer__column::after {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transition: 0.5s all;
+}
+.offer__column span::before {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    transition: 0.5s all;
+}
+.offer__column span::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transition: 0.5s all;
+}
+
+.offer__column:hover::before, .offer__column:hover::after {
+    width: 50px;
+    height: 50px;
+}
+
+.offer__column:hover span::before, .offer__column:hover span::after {
+    width: 50px;
+    height: 50px;
+}
+	.offer__desc h1 {
+		text-align: center;
+		font-size: 30px;
+	}
+	.offer__desc p {
+		font-size: 20px;
+	}
+	.offer__column img {
+		height: 150px;
+	}
+
+.skills {
+	
+	font-size: 30px;
+	border-top: 2px solid #0ff;
+	display: flex;
+}
+.skills ul {
+	padding-left: 40px;
+	list-style: none;
+	color: #0ff;
+}
+.skills li {
+	position: relative;
+}
+.skills li::before {
+	content: "\f15b";
+	font-family: "Font Awesome 5 Free"; 
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+}
+
+.skills li.folder::before {
+	content: "\f07c";
+}
+.skills li > ul > li::after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	top:0;
+left: -25px;
+	border: solid #0ff;
+	display: block;
+	border-right:0;
+	border-top: 0;
+}
+.skills__column {
+	padding: 30px;
+ flex: 1 50%;
+	border-right: 2px solid #0ff;
+}
+.skills li:hover {
+	background-color: #0ff;
+	color:#002626;
+}
+.skills li:hover>ul {
+	background-color:#002626;
+	color:#0ff;
+}
